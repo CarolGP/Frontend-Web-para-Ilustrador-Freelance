@@ -35,8 +35,11 @@ function App(){
   return(
 
     <BrowserRouter>
+     <div className="app">
 
       <Navbar />
+
+      <main className="mainContent">
 
       <Routes>
 
@@ -48,6 +51,8 @@ function App(){
         <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      </main>
 
       <footer className="footer">
 
@@ -85,6 +90,7 @@ function App(){
           </a>
         </div>
       </footer>
+      </div>
       <ScrollTopButton/>
     </BrowserRouter>
   );

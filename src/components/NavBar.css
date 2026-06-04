@@ -23,7 +23,7 @@
 .brandName{
   color: var(--accent);
   font-family: "Lilita One", sans-serif;
-  font-size:60px;
+  font-size:50px;
   font-weight:bold;
   line-height:1;
 }
@@ -43,7 +43,7 @@
   font-family: "Source Sans 3", sans-serif;
   color:var(--neutral);
   text-decoration:none;
-  font-size:18px;
+  font-size:  25px;
   padding:8px 14px;
   border-radius:20px;
 }

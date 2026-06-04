@@ -16,14 +16,14 @@
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:40px;
+  gap:30px;
   max-width:1200px;
   margin:auto;
 }
 
 
 .aboutText{
-  max-width:700px;
+  max-width:600px;
   text-align:center;
 }
 
@@ -38,7 +38,7 @@
 
 .aboutImage{
   width:100%;
-  max-width:320px;
+  max-width:200px;
   border-radius:25px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
@@ -50,8 +50,8 @@
   }
 
   .aboutTitle{
-    font-size:48px;
-    margin-bottom:50px;
+    font-size:45px;
+    margin-bottom:30px;
   }
 
   .aboutParagraph{
@@ -60,23 +60,23 @@
 
 
   .aboutImage{
-    max-width:350px;
+    max-width: 250px;
   }
 }
 
 
 @media (min-width:1024px){
   .aboutSection{
-    padding:80px;
+    padding:40px 80px;
   }
 
   .aboutHero{
-    min-height:600px;
-    flex-direction:row; /* vuelve a horizontal */
-    justify-content:space-between;
-    align-items:center;
-    gap:60px;
-  }
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+}
+}
 
   .aboutText{
     text-align:left;
@@ -84,7 +84,6 @@
   }
 
   .aboutParagraph{
-    font-size:30px;
+    font-size:24px;
   }
-
 }
