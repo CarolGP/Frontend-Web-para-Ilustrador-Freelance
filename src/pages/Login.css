@@ -6,7 +6,6 @@
   align-items:center;
 }
 
-
 .loginBox{
   background-color:#4155B9;
   padding:40px 50px;
@@ -17,14 +16,11 @@
   width:340px;
 }
 
-
-
 .loginTitle{
   color:white;
   margin:0;
   margin-bottom:10px;
 }
-
 
 .loginInput{
   padding:12px;
@@ -32,8 +28,6 @@
   border-radius:10px;
   font-size:16px;
 }
-
-
 
 .loginButton{
   background-color:#E4664D;
@@ -46,8 +40,19 @@
   margin-top:6px;
 }
 
-
-
 .loginButton:hover{
   background-color:#2F97C7;
+}
+
+@media (max-width:768px){
+  .loginSection{
+    min-height:auto;
+    padding:40px 20px;
+  }
+
+  .loginBox{
+    width:100%;
+    padding:30px 20px;
+    box-sizing:border-box;
+  }
 }
