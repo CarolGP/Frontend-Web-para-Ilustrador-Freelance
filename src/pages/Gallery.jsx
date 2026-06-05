@@ -6,7 +6,7 @@ import "./Gallery.css";
 export const Gallery = () => {
 
   const [items, setItems] = useState([]);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export const Gallery = () => {
               <div
                 className={`galleryCard ${sizeClass}`}
                 key={item._id}
-                onClick={() => setSelectedImage(item.imageUrl)}
+                onClick={() => setSelectedIndex(index)}
               >
 
                 <img
@@ -54,20 +54,47 @@ export const Gallery = () => {
       </div>
 
 
-      {selectedImage && (
+  {selectedIndex !== null && (
+  <div
+    className="modalOverlay"
+    onClick={() => setSelectedIndex(null)}>
 
-        <div
-          className="modalOverlay"
-          onClick={() => setSelectedImage(null)}
-        >
+    <button
+      className="carouselButton left"
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedIndex(
+          selectedIndex === 0
+            ? items.length - 1
+            : selectedIndex - 1
+        );
+      }}
+    >
+      ←
+    </button>
 
-          <img
-            src={selectedImage}
-            className="modalImage"
-          />
+    <img
+      src={items[selectedIndex].imageUrl}
+      alt={items[selectedIndex].title}
+      className="modalImage"
+      onClick={(e) => e.stopPropagation()}
+    />
 
-        </div>
-      )}
+    <button
+      className="carouselButton right"
+      onClick={(e) => {
+        e.stopPropagation();
+        setSelectedIndex(
+          selectedIndex === items.length - 1
+            ? 0
+            : selectedIndex + 1
+        );
+      }}
+    >
+      →
+    </button>
+  </div>
+)}
     </section>
   );
 };

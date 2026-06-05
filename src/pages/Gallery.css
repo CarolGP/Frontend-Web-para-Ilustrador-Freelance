@@ -73,6 +73,27 @@
   border-radius:12px;
 }
 
+.carouselButton{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:12px;
+  font-size:24px;
+  cursor:pointer;
+  z-index:1001;
+}
+
+.carouselButton.left{
+  left:15%;
+}
+
+.carouselButton.right{
+  right:15%;
+}
+
 .loading{
   text-align:center;
   margin-top:80px;
